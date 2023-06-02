@@ -16,6 +16,13 @@ const Header = () => {
         <div className="header-logo">
           <img src={logo} alt="Stream figthers logo" />
         </div>
+        <ul className="header-menu-list">
+          <li className="header-menu-list__item">Inicio</li>
+          <li className="header-menu-list__item">Peleadores</li>
+          <li className="header-menu-list__item">Contenido</li>
+          <li className="header-menu-list__item">Predicciones</li>
+          <li className="header-menu-list__item">Eventos</li>
+        </ul>
         <div
           className={`header-menu ${
             showMenuSidebar ? "show-menu" : "hide-menu"
