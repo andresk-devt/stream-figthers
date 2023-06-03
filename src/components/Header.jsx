@@ -2,7 +2,7 @@
 import { useState } from "react";
 import logo from "../assets/images/logoUFC.png";
 import "../assets/styles/Header.css";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const Header = () => {
   const [showMenuSidebar, setShowMenuSidebar] = useState(false);
@@ -27,9 +27,9 @@ const Header = () => {
         </div>
         <ul className="header-menu-list">
           {menuList.map((item) => (
-            <Link to={item.path} key={item.name}>
+            <NavLink to={item.path} key={item.name}>
               <li className="header-menu-list__item">{item.name}</li>
-            </Link>
+            </NavLink>
           ))}
         </ul>
         <div
@@ -39,53 +39,53 @@ const Header = () => {
         >
           <ul className="menu-list">
             {menuList.map((item) => (
-              <Link to={item.path} key={item.name}>
+              <NavLink to={item.path} key={item.name}>
                 <li className="menu-list__item">{item.name}</li>
-              </Link>
+              </NavLink>
             ))}
             <div className="social-media-list">
               <div className="social-title">Redes sociales</div>
               <hr />
-              <a href="">
+              <Link>
                 <box-icon
                   type="logo"
                   name="instagram"
                   size="md"
                   color="#FAFAFA"
                 ></box-icon>
-              </a>
-              <a href="">
+              </Link>
+              <Link>
                 <box-icon
                   name="twitter"
                   type="logo"
                   size="md"
                   color="#FAFAFA"
                 ></box-icon>
-              </a>
-              <a href="">
+              </Link>
+              <Link>
                 <box-icon
                   name="twitch"
                   type="logo"
                   size="md"
                   color="#FAFAFA"
                 ></box-icon>
-              </a>
-              <a href="">
+              </Link>
+              <Link>
                 <box-icon
                   name="kickstarter"
                   type="logo"
                   size="md"
                   color="#FAFAFA"
                 ></box-icon>
-              </a>
-              <a href="">
+              </Link>
+              <Link>
                 <box-icon
                   name="youtube"
                   type="logo"
                   size="md"
                   color="#FAFAFA"
                 ></box-icon>
-              </a>
+              </Link>
             </div>
           </ul>
         </div>
