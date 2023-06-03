@@ -11,7 +11,7 @@ function App() {
     <>
       <Routes>
         <Route element={<Layout/>} path="/">
-          <Route element={<Inicio />} path="/"></Route>
+          <Route element={<Inicio />} index></Route>
           <Route element={<Peleadores />} path="/peleadores"></Route>
           <Route element={<Contenido />} path="/contenido"></Route>
           <Route element={<Predicciones />} path="/predicciones"></Route>
