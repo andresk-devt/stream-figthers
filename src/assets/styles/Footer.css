@@ -1,8 +1,8 @@
 .footer {
   width: -webkit-fill-available;
   padding: 20px;
-  position: absolute;
-  bottom: 0;
+  /* position: absolute; */
+  /* bottom: 0; */
   text-align: center;
   background-color: black;
 }
