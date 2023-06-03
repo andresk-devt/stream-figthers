@@ -3,8 +3,14 @@
   gap: 30px;
 }
 
+.header-menu-list a {
+  text-decoration: none;
+  color: white;
+}
+
 .header-menu-list__item {
-  font-size: 1rem;
+  font-family: "bebas-neue", sans-serif;
+  font-size: 1.4rem;
   font-weight: bold;
   cursor: pointer;
 }
@@ -93,9 +99,15 @@
   position: relative;
 }
 
+.menu-list a {
+  text-decoration: none;
+  color: white;
+}
+
 .menu-list__item {
   margin: 25px auto;
-  font-size: 1.3rem;
+  font-family: "bebas-neue", sans-serif;
+  font-size: 2rem;
   font-weight: bold;
   cursor: pointer;
 }

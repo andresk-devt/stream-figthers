@@ -2,9 +2,18 @@
 import { useState } from "react";
 import logo from "../assets/images/logoUFC.png";
 import "../assets/styles/Header.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [showMenuSidebar, setShowMenuSidebar] = useState(false);
+
+  const [menuList] = useState([
+    { name: "Inicio", path: "/" },
+    { name: "Peleadores", path: "/peleadores" },
+    { name: "Contenido", path: "/contenido" },
+    { name: "Predicciones", path: "/predicciones" },
+    { name: "Eventos", path: "/eventos" },
+  ]);
 
   const toggleSidebar = (data) => {
     setShowMenuSidebar(data);
@@ -17,11 +26,11 @@ const Header = () => {
           <img src={logo} alt="Stream figthers logo" />
         </div>
         <ul className="header-menu-list">
-          <li className="header-menu-list__item">Inicio</li>
-          <li className="header-menu-list__item">Peleadores</li>
-          <li className="header-menu-list__item">Contenido</li>
-          <li className="header-menu-list__item">Predicciones</li>
-          <li className="header-menu-list__item">Eventos</li>
+          {menuList.map((item) => (
+            <Link to={item.path} key={item.name}>
+              <li className="header-menu-list__item">{item.name}</li>
+            </Link>
+          ))}
         </ul>
         <div
           className={`header-menu ${
@@ -29,11 +38,11 @@ const Header = () => {
           }`}
         >
           <ul className="menu-list">
-            <li className="menu-list__item">Inicio</li>
-            <li className="menu-list__item">Peleadores</li>
-            <li className="menu-list__item">Contenido</li>
-            <li className="menu-list__item">Predicciones</li>
-            <li className="menu-list__item">Eventos</li>
+            {menuList.map((item) => (
+              <Link to={item.path} key={item.name}>
+                <li className="menu-list__item">{item.name}</li>
+              </Link>
+            ))}
             <div className="social-media-list">
               <div className="social-title">Redes sociales</div>
               <hr />
