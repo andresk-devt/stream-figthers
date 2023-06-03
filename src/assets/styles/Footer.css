@@ -1,5 +1,5 @@
 .footer {
-  width: 100%;
+  width: -webkit-fill-available;
   padding: 20px;
   position: absolute;
   bottom: 0;

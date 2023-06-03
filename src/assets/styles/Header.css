@@ -157,8 +157,7 @@
 
 @media (min-width: 800px) {
   .header-menu {
-    transform: translateX(100%);
-    animation: slideOut 0.3s ease;
+    display: none;
   }
   .header-icon {
     display: none;
