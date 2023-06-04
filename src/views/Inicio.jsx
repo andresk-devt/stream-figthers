@@ -1,6 +1,10 @@
 import ImagenInicio from "../assets/images/ImagenInicio.jpeg";
 import CountDownClock from "../components/CountdownClock";
 import "../assets/styles/Inicio.css";
+import mercadolibreBrand from "../assets/images/mercado-libre-logo.png";
+import budweiserBrand from "../assets/images/budweiser-logo.png";
+import pocoBrand from "../assets/images/poco-logo.png";
+import wplayBrand from "../assets/images/wplay-logo.png";
 
 const Inicio = () => {
   return (
@@ -29,16 +33,38 @@ const Inicio = () => {
             con un show inolvidable que elevará la energía a un nivel
             completamente nuevo.
             <br />
-            No pierdas la oportunidad de reservar tu lugar
-            y sumergirte en esta experiencia intensa y desgarradora que
-            revolucionará el mundo del streaming. ¡El caos del cuadrilátero
-            digital está a punto de comenzar!
+            No pierdas la oportunidad de reservar tu lugar y sumergirte en esta
+            experiencia intensa y desgarradora que revolucionará el mundo del
+            streaming. ¡El caos del cuadrilátero digital está a punto de
+            comenzar!
           </p>
 
-          <button className="button-container">
-            COMPRAR BOLETA AQUI 
-          </button>
-
+          <button className="button-container">COMPRAR BOLETA AQUI</button>
+        </div>
+      </article>
+      <article className="sponsors-container">
+        <h1 className="sponsors-tittle">Patrocionadores oficiales:</h1>
+        <div className="sponsors-list">
+          <div className="sponsors-list__item">
+            <div className="image-container">
+              <img src={mercadolibreBrand} alt="" />
+            </div>
+          </div>
+          <div className="sponsors-list__item">
+            <div className="image-container">
+              <img src={budweiserBrand} alt="" />
+            </div>
+          </div>
+          <div className="sponsors-list__item">
+            <div className="image-container">
+              <img src={wplayBrand} alt="" />
+            </div>
+          </div>
+          <div className="sponsors-list__item">
+            <div className="image-container">
+              <img src={pocoBrand} alt="" />
+            </div>
+          </div>
         </div>
       </article>
     </>

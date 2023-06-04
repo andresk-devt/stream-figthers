@@ -96,3 +96,34 @@
     width: 65%;
   }
 }
+
+/* Sponsors */
+.sponsors-container {
+  margin: 50px auto;
+}
+.sponsors-tittle {
+  font-size: 4rem;
+  font-family: "bebas-neue", sans-serif;
+  text-align: center;
+}
+.sponsors-list {
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+
+.sponsors-list__item {
+  width: 25%;
+}
+
+.sponsors-list__item img {
+  height: 100%;
+  width: 100%;
+}
+
+.image-container {
+  width: 50%;
+  margin: auto;
+}
