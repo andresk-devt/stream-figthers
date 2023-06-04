@@ -46,22 +46,22 @@ const Inicio = () => {
         <h1 className="sponsors-tittle">Patrocionadores oficiales:</h1>
         <div className="sponsors-list">
           <div className="sponsors-list__item">
-            <div className="image-container">
+            <div className="logo-image-container">
               <img src={mercadolibreBrand} alt="" />
             </div>
           </div>
           <div className="sponsors-list__item">
-            <div className="image-container">
+            <div className="logo-image-container">
               <img src={budweiserBrand} alt="" />
             </div>
           </div>
           <div className="sponsors-list__item">
-            <div className="image-container">
+            <div className="logo-image-container">
               <img src={wplayBrand} alt="" />
             </div>
           </div>
           <div className="sponsors-list__item">
-            <div className="image-container">
+            <div className="logo-image-container">
               <img src={pocoBrand} alt="" />
             </div>
           </div>

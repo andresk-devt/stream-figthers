@@ -123,7 +123,19 @@
   width: 100%;
 }
 
-.image-container {
+.logo-image-container {
   width: 50%;
   margin: auto;
+}
+
+@media (max-width: 800px) {
+  .sponsors-tittle {
+    font-size: 2.5rem;
+  }
+  .sponsors-list {
+    flex-direction: column;
+  }
+  .sponsors-list__item {
+    width: auto;
+  }
 }
