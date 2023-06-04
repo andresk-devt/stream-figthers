@@ -64,37 +64,15 @@
   cursor: pointer;
 }
 
-@media (max-width: 1200px) {
-  .section-container {
-    flex-direction: column-reverse;
-    height: auto;
-  }
+/* Figths */
+.figths-container {
+  margin: 50px auto;
+}
 
-  .section-description {
-    width: 90%;
-  }
-
-  .description-title {
-    text-align: center;
-  }
-
-  .description-text {
-    width: 90%;
-    margin: auto;
-  }
-
-  .button-container {
-    margin: 30px auto;
-  }
-
-  .image-section {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .image-container {
-    width: 65%;
-  }
+.figths-tittle {
+  font-size: 4rem;
+  font-family: "bebas-neue", sans-serif;
+  text-align: center;
 }
 
 /* Sponsors */
@@ -137,5 +115,38 @@
   }
   .sponsors-list__item {
     width: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .section-container {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+
+  .section-description {
+    width: 90%;
+  }
+
+  .description-title {
+    text-align: center;
+  }
+
+  .description-text {
+    width: 90%;
+    margin: auto;
+  }
+
+  .button-container {
+    margin: 30px auto;
+  }
+
+  .image-section {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .image-container {
+    width: 65%;
   }
 }

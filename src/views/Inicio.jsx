@@ -1,12 +1,63 @@
 import ImagenInicio from "../assets/images/ImagenInicio.jpeg";
 import CountDownClock from "../components/CountdownClock";
 import "../assets/styles/Inicio.css";
+import FigthsCards from "../components/FigthsCards";
 import mercadolibreBrand from "../assets/images/mercado-libre-logo.png";
 import budweiserBrand from "../assets/images/budweiser-logo.png";
 import pocoBrand from "../assets/images/poco-logo.png";
 import wplayBrand from "../assets/images/wplay-logo.png";
+import figtherOne from "../assets/images/figther1.png";
+import figtherTwo from "../assets/images/figther2.png";
+import { useState } from "react";
 
 const Inicio = () => {
+  const [figths] = useState([
+    {
+      figtherOne: {
+        image: figtherOne,
+        name: 'Carlos Barrueco'
+      },
+      figtherTwo: {
+        image: figtherTwo,
+        name: 'Daniel Jaramillo'
+      },
+      category: "Peso pesado",
+    },
+    {
+      figtherOne: {
+        image: figtherOne,
+        name: 'Mayits'
+      },
+      figtherTwo: {
+        image: figtherTwo,
+        name: 'Sara Torres'
+      },
+      category: "Peso ligero",
+    },
+    {
+      figtherOne: {
+        image: figtherOne,
+        name: 'Sebastian Gomez'
+      },
+      figtherTwo: {
+        image: figtherTwo,
+        name: 'Leadro loazia'
+      },
+      category: "Peso medio",
+    },
+    {
+      figtherOne: {
+        image: figtherOne,
+        name: 'Katherine Cal Afú'
+      },
+      figtherTwo: {
+        image: figtherTwo,
+        name: 'Saray Guzman'
+      },
+      category: "Peso medio",
+    },
+  ]);
+
   return (
     <>
       <CountDownClock />
@@ -41,6 +92,21 @@ const Inicio = () => {
 
           <button className="button-container">COMPRAR BOLETA AQUI</button>
         </div>
+      </article>
+      <article className="figths-container">
+        <h1 className="figths-tittle">Peleas</h1>
+        <ul className="figths-list">
+          {figths.map((el, index) => (
+            <li className="figths-list__item" key={index}>
+              <FigthsCards
+                tittle={el.tittle}
+                figtherOne={el.figtherOne}
+                figtherTwo={el.figtherTwo}
+                category={el.category}
+              />
+            </li>
+          ))}
+        </ul>
       </article>
       <article className="sponsors-container">
         <h1 className="sponsors-tittle">Patrocionadores oficiales:</h1>
