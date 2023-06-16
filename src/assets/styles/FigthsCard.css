@@ -3,7 +3,6 @@
 }
 
 .figth-card {
-  width: 100%;
   margin: 30px auto;
   border-bottom: 1px solid rgba(213,214,216,.2);
   border-top: 1px solid rgba(213,214,216,.2);
@@ -41,4 +40,10 @@
 .title span {
   color: red;
   margin-right: 10px;
+}
+
+@media (max-width: 800px) {
+  .figther-description {
+    width: auto;
+  }
 }

@@ -2,7 +2,7 @@ import "../assets/styles/countClock.css";
 import { useState, useEffect } from "react";
 
 const CountDownClock = () => {
-  const targetDate = new Date("2023-10-01T17:00:00");
+  const targetDate = new Date("2023-09-20T17:00:00");
   
   const calculateTimeLeft = () => {
     const now = new Date();
