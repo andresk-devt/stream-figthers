@@ -5,3 +5,156 @@
   margin: 50px auto;
   text-align: center;
 }
+
+.figther-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 100%;
+  border-bottom: 1px solid rgba(213, 214, 216, .2);
+}
+
+.figther-image {
+  padding: 20px 20px 0px 20px;
+}
+
+.figther-image img {
+  height: 100%;
+  width: 300px;
+  object-fit: cover;
+}
+
+.personal-information {
+  font-family: "bebas-neue", sans-serif;
+}
+
+.figther-weigth {
+  margin: 15px 0px;
+}
+
+.category-text {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  line-height: .78rem;
+  font-size: .9rem;
+  letter-spacing: 1.2px;
+  color: #abadb1;
+  font-weight: bold;
+}
+
+.weigth-text {
+  color: #abadb1;
+  font-size: .85rem;
+  line-height: .78rem;
+  letter-spacing: .2px;
+}
+
+.nickname-text {
+  color: #abadb1;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+}
+
+.name-text {
+  font-size: 1.8rem;
+}
+
+.streak-text {
+  letter-spacing: 1.5px;
+}
+
+
+.follow-button {
+  outline: none;
+  border: none;
+  background-color: white;
+  color: #abadb1;
+  padding: 8px;
+  width: 100px;
+  height: 40px;
+  margin: 20px 0px;
+  cursor: pointer;
+  transition: width 0.3s ease;
+  justify-content: center;
+}
+
+.button-text {
+  font-family: "bebas-neue", sans-serif;
+  letter-spacing: 1.3px;
+  font-weight: bold;
+  color: black;
+}
+
+.social-media {
+  display: none;
+}
+
+.follow-button:hover {
+  width: 180px;
+  background-color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.follow-button:hover .social-media {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.follow-button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  transition: width 0.3s ease;
+}
+
+.follow-button:hover::after {
+  width: 100%;
+}
+
+/* Desktop styles */
+.figther-weigth-column {
+  display: none;
+}
+
+.figther-social-media-column {
+  display: none;
+}
+
+@media (max-width: 490px) {
+  .figther-image img {
+    width: 170px;
+  }
+  .figther-information {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 800px) {
+  .figther-card {
+    justify-content: space-around;
+  }
+  .figther-weigth-column {
+    display: block;
+  }
+  .figther-weigth {
+    display: none;
+  }
+  .figther-social-medias {
+    display: none;
+  }
+  .figther-social-media-column {
+    display: block;
+  }
+}
