@@ -44,6 +44,15 @@
   text-transform: uppercase;
 }
 
+.event-message {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: red;
+}
+
 @media (max-width: 801px) {
   .message-container {
     font-size: 2rem;

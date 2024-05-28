@@ -1,9 +1,10 @@
+/* eslint-disable react/no-unescaped-entities */
 import "../assets/styles/countClock.css";
 import { useState, useEffect } from "react";
 
 const CountDownClock = () => {
-  const targetDate = new Date("2024-09-20T17:00:00");
-  
+  const targetDate = new Date("2023-09-20T17:00:00");
+
   const calculateTimeLeft = () => {
     const now = new Date();
     const difference = targetDate - now;
@@ -17,6 +18,8 @@ const CountDownClock = () => {
         minutes: Math.floor((difference / (1000 * 60)) % 60),
         seconds: Math.floor((difference / 1000) % 60),
       };
+    } else {
+      timeLeft = "El evento ya fue realizado este año, esperar a nueva actualizacion";
     }
     return timeLeft;
   };
@@ -38,28 +41,34 @@ const CountDownClock = () => {
       <div className="banner-container">
         <div className="message-container">
           <h1>
-            ¡Prepárate para el evento más esperado! Stream <span>figthers</span>  iniciará
-            en:
+            ¡Prepárate para el evento más esperado! Stream <span>figthers</span>{" "}
+            iniciará en:
           </h1>
         </div>
-        <div className="countdown-clock">
-          <div className="digit">
-            <span>{timeLeft.days.toString().padStart(2, "0")}</span>
-            <span>Días</span>
+        {typeof timeLeft === "object" && timeLeft !== null ? (
+          <div className="countdown-clock">
+            <div className="digit">
+              <span>{timeLeft.days.toString().padStart(2, "0")}</span>
+              <span>Días</span>
+            </div>
+            <div className="digit">
+              <span>{timeLeft.hours.toString().padStart(2, "0")}</span>
+              <span>Horas</span>
+            </div>
+            <div className="digit">
+              <span>{timeLeft.minutes.toString().padStart(2, "0")}</span>
+              <span>Minutos</span>
+            </div>
+            <div className="digit">
+              <span>{timeLeft.seconds.toString().padStart(2, "0")}</span>
+              <span>Segundos</span>
+            </div>
           </div>
-          <div className="digit">
-            <span>{timeLeft.hours.toString().padStart(2, "0")}</span>
-            <span>Horas</span>
+        ) : (
+          <div className="event-message">
+            "{timeLeft}"
           </div>
-          <div className="digit">
-            <span>{timeLeft.minutes.toString().padStart(2, "0")}</span>
-            <span>Minutos</span>
-          </div>
-          <div className="digit">
-            <span>{timeLeft.seconds.toString().padStart(2, "0")}</span>
-            <span>Segundos</span>
-          </div>
-        </div>
+        )}
       </div>
     </>
   );

@@ -1,9 +1,17 @@
+import "../assets/styles/NotFound.css";
+
 const NotFound = () => {
   return (
     <>
-      <h1>Not found page</h1>
+      <div className="not-found">
+        <h1>
+          Not Found Page
+          <br />
+          <span>404</span>
+        </h1>
+      </div>
     </>
-  )
-}
+  );
+};
 
 export default NotFound;

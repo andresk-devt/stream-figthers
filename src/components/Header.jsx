@@ -10,9 +10,6 @@ const Header = () => {
   const [menuList] = useState([
     { name: "Inicio", path: "/" },
     { name: "Peleadores", path: "/peleadores" },
-    { name: "Contenido", path: "/contenido" },
-    { name: "Predicciones", path: "/predicciones" },
-    { name: "Eventos", path: "/eventos" },
   ]);
 
   const toggleSidebar = (data) => {
